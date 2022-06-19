@@ -4,7 +4,7 @@ import 'package:flip_card_game/ui/status_message.dart';
 import 'package:flutter/material.dart';
 
 import 'ui/card/game_card.dart';
-import 'ui/cards.dart';
+
 import 'ui/try_again_button.dart';
 
 enum GameState {
@@ -65,12 +65,13 @@ class _GameState extends State<Game> {
                 gameState: gameState,
                 winCard: winCard,
                 onFlipFinished: onFlipFinished),
+            const SizedBox(height: 40),
             //card2
             GameCard(
                 gameState: gameState,
                 winCard: !winCard,
                 onFlipFinished: onFlipFinished),
-
+            const SizedBox(height: 40),
             if (gameState != GameState.progress) ...[
               Opacity(
                 opacity: gameState != GameState.progress ? 1 : 0,
@@ -79,6 +80,7 @@ class _GameState extends State<Game> {
                   color: gameState.color,
                 ),
               ),
+              const SizedBox(height: 20),
               Opacity(
                 opacity: gameState != GameState.progress ? 1 : 0,
                 child: TryAgainButton(
