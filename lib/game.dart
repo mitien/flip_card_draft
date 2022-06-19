@@ -19,7 +19,7 @@ enum GameState {
 }
 
 class Game extends StatefulWidget {
-  Game({Key? key}) : super(key: key);
+  const Game({Key? key}) : super(key: key);
 
   @override
   State<Game> createState() => _GameState();

@@ -1,11 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:page_flip_builder/page_flip_builder.dart';
 
 import 'game.dart';
-import 'ui/card/game_card.dart';
-import 'ui/card/game_card_face_holder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +31,7 @@ class FlipCardGamePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: const Text('Find Logo')),
-      body: Game(),
+      body: const Game(),
     );
   }
 }
